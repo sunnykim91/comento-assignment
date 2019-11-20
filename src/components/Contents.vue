@@ -11,34 +11,22 @@
           <div
             class="categoryName"
             v-if="categoryList[0].id === content.category_id"
-          >
-            {{ categoryList[0].name }}
-          </div>
+          >{{ categoryList[0].name }}</div>
           <div
             class="categoryName"
             v-if="categoryList[1].id === content.category_id"
-          >
-            {{ categoryList[1].name }}
-          </div>
+          >{{ categoryList[1].name }}</div>
           <div
             class="categoryName"
             v-if="categoryList[2].id === content.category_id"
-          >
-            {{ categoryList[2].name }}
-          </div>
+          >{{ categoryList[2].name }}</div>
           <span class="contentNum">{{ content.user_id }}</span>
         </div>
         <div class="content-Body">
           <div class="body-Top">
-            <div class="userEmail">
-              이메일
-            </div>
-            <div>
-              |
-            </div>
-            <div class="createdDate">
-              {{ content.created_at }}
-            </div>
+            <div class="userEmail">이메일</div>
+            <div>|</div>
+            <div class="createdDate">{{ content.created_at }}</div>
           </div>
           <div class="body-title">{{ content.title }}</div>
           <div class="body-content">{{ content.contents }}</div>
@@ -63,6 +51,9 @@ export default {
   computed: {
     hasResult: function() {
       return this.contents.length > 0;
+    },
+    param: function() {
+      return this.$route.params;
     }
   },
   methods: {
@@ -76,7 +67,6 @@ export default {
         )
         .then(result => {
           this.contents = result.data.list.data;
-          console.log(this.contents);
         });
     },
     getCategory: function() {
@@ -87,8 +77,8 @@ export default {
       });
     },
     go(targetName, contentId) {
-      this.$EventBus.$emit("click-detailList", contentId);
-      this.$router.push(targetName);
+      // this.$EventBus.$emit("click-detailList", contentId);
+      this.$router.push(targetName + "/" + contentId);
     }
   },
   mounted() {
