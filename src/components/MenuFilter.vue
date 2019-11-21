@@ -59,7 +59,7 @@ export default {
   data() {
     return {
       order: "asc",
-      selected: {},
+      selected: 1,
       options: [
         { text: "카테고리1", value: 1 },
         { text: "카테고리2", value: 2 },

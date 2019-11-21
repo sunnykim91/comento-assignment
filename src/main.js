@@ -7,6 +7,9 @@ import BootstrapVue from "bootstrap-vue";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-vue/dist/bootstrap-vue.css";
 import VueRouter from "vue-router";
+import infiniteScroll from "vue-infinite-scroll";
+
+Vue.use(infiniteScroll);
 
 Vue.use(BootstrapVue);
 Vue.prototype.$http = axios;
