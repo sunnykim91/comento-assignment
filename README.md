@@ -1,24 +1,38 @@
-# my-app
+# 코멘토 과제
 
-## Project setup
-```
-yarn install
-```
+## 코멘토 구현 내용
 
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
+## 전체적인 개발 관련 내용
 
-### Compiles and minifies for production
-```
-yarn build
-```
+- Vue를 처음 써봐서 구현하는데 어려움이 있었음.
+- less를 적용하려 했으나, 시간 부족
+- vue-bootstrap적용하여 Detailpage에 card 형태 사용
+- axios를 이용하여 서버와 통신
+- 반응형 웹으로 구현하지 못함.
+- 크로스 브라우징에 대응 하지 못함.(Chrome, Explorer11 버전 동작 확인)
+- 총 개발 시간 : 약 12시간
 
-### Lints and fixes files
-```
-yarn lint
-```
+### 1. 리스트 불러오기 (infinite-loading)
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+- 처음에 10개만 불러오기 (구현완료)
+- 스크롤이 최하단에 닿을 때마다 리스트에 10개씩 추가 (구현완료)
+
+- email 정보 가져오는 것 미구현.
+- 글번호가 어떤 정보인지 몰라서 user_id로 글번호를 매김.
+
+### 2. 정렬 (오름차순, 내림차순)
+
+- 선택한 정렬순으로 리스트 불러오기 (구현완료 - api asc, desc요청시 결과가 같게 나와서 화면에 반영이 안되는것처럼 보임)
+
+### 3. 필터 (modal)
+
+- 별도 컴포넌트로 분리하여 개발 (구현완료)
+- 기본값: 모두 선택 (미완성 - 기본값을 1번 카테고리로 지정해놓고 3개의 카테고리 중 한개만 선택할 수 있도록 함)
+
+### 4. 광고 삽입
+
+- 4번째 index마다 광고 1개 삽입(구현완료)
+
+### + VOC(고객센터 접수건)\*\*
+
+- 아래 VOC list는 가상으로 작성된 고객 VOC의 full raw data입니다. (반영하지 못함)
